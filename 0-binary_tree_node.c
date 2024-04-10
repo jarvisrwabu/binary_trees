@@ -11,17 +11,17 @@
 
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
 {
-	if (parent == NULL)
-	{
-		return (NULL); /*Return NULL on failure*/
-	}
-
+	/*If parent is NULL node is the ROOT!*/
 	binary_tree_t *p = malloc(sizeof(binary_tree_t));
+
+	if (p == NULL)
+	{
+		return (NULL); /*On Failure*/
+	}
 
 	p->n = value;
 	p->parent = parent;
 	p->left = NULL;
 	p->right = NULL;
-	free(p);
 	return (p);
 }
