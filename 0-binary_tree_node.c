@@ -13,7 +13,7 @@ binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
 {
 	if (parent == NULL)
 	{
-		return;
+		return (NULL); /*Return NULL on failure*/
 	}
 
 	binary_tree_t *p = malloc(sizeof(binary_tree_t));
